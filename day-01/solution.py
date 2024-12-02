@@ -14,10 +14,7 @@ def read_data(input_file):
 
 def solution1(input_file):
         list_a, list_b = read_data(input_file)
-        total_difference = 0
-        for pair in zip(list_a, list_b):
-            total_difference += max(pair) - min(pair)
-        return total_difference
+        return sum([max(pair) - min(pair) for pair in zip(list_a, list_b)])
 
 
 def solution2(input_file):
